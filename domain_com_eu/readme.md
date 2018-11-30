@@ -4,8 +4,7 @@
 https://www.domain.com.au/sale/api/map-search/?suburb=<suburb>&sort=price-asc&mode=sale&digitaldata=1&displaymap=1
 
 
-IF in JSON value :
-searchResultCount: 23,
+In JSON response there is "searchResultCount: X"
 
 if searchResultCount > 400 
     than raise HUGE error because this whole idea will fail
