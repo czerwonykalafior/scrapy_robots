@@ -1,0 +1,13 @@
+setup.py
+domain_com_au/__init__.py
+domain_com_au/items.py
+domain_com_au/middlewares.py
+domain_com_au/pipelines.py
+domain_com_au/settings.py
+domain_com_au/spiders/__init__.py
+domain_com_au/spiders/domain.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[scrapy]
+settings = domain_com_au.settings
+
