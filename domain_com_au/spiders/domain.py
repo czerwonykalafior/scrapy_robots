@@ -69,14 +69,12 @@ class DomainSpider(scrapy.Spider):
 
         search_type = data['digitalData']['searchLocationCat']
         if search_type != 'Suburb':
-            self.log("ERROR - empty suburb", response.url)
+            raise StopIteration
 
         locs_found = data['digitalData']['searchResultCount']
-        # self.log('locations_found', locs_found)
 
         # When there is more than 400 loc on listing this design will fail poorly.
         if locs_found > 400:
-            self.log("CRITICAL ERROR", response.url)
             raise CloseSpider(reason='Too much data in response')
 
         # Max loc on one page is 200. When there is more than 200 loc on listing changing sorting to DESC
