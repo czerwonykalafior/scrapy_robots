@@ -1,3 +1,8 @@
+# Business requirement
+Scrape All locations from 'buy' filter in Australia
+
+# Flow
+
 1) Loop and open links "All .*? Suburbs" in https://www.domain.com.au/Public/SiteMap.aspx/ 
 2) Loop over links in 'ul class="suburbs-list"' and extract <suburb> from links  =  https://www.domain.com.au/sale/(.*?)/
 3) Open URL:

@@ -1,0 +1,16 @@
+Content-Type: application/json; charset=utf-8
+X-Dns-Prefetch-Control: off
+X-Frame-Options: SAMEORIGIN
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Etag: W/"4922-1CRPBRHarYZh/xuyXgHxqTf8Cns"
+Server-Timing: searchParser; dur=39.488158; desc="Search Parser", prepareRequest; dur=0.053097; desc="Prepare Request", searchApiTime; dur=32.129958; desc="Search API", searchTransform; dur=21.230553999999998; desc="Search Transform", total; dur=93.856483; desc="Total Response Time"
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Cache-Control: max-age=0
+Expires: Fri, 30 Nov 2018 22:34:07 GMT
+Date: Fri, 30 Nov 2018 22:34:07 GMT
+Set-Cookie: DEVICE_SESSIONID=16fccae1-ee24-4d7e-a1cb-7896fc53373b; Max-Age=2147483647; Path=/; Expires=Thu, 19 Dec 2086 01:48:14 GMT
+Set-Cookie: domain-dt=1; expires=Fri, 07-Dec-2018 22:34:07 GMT; path=/
+Set-Cookie: bm_sv=1704947E3ECF424DDCEAB2A950132217~KNy9K/iRj6kpreGvGr4lAEHiXTWQh2bNviXBDHVQwncsnBzFLp3pW7zJT5HNfE4ahqWGGi/dWDOwdreaPTWZ2JJptn1Kt+O4E+U7/aThmFUCH4+DoF7rBoLWs1lMXs5fPC2Nz/Mmi5L9jiW/kYe03uZ7XPSoSq7slf429LfGxoM=; Domain=.domain.com.au; Path=/; Max-Age=7198; HttpOnly
