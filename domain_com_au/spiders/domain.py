@@ -10,6 +10,8 @@ from bs4 import BeautifulSoup
 
 
 class DomainSpider(scrapy.Spider):
+    # This design will only work when on the listing page there is less than 400 locations found
+
     name = 'domain'
     allowed_domains = ['domain.com.au']
     start_urls = ['https://www.domain.com.au/Public/SiteMap.aspx']
@@ -64,16 +66,23 @@ class DomainSpider(scrapy.Spider):
         """
 
         data = json.loads(response.body)
+
+        search_type = data['digitalData']['searchLocationCat']
+        if search_type != 'Suburb':
+            self.log("ERROR - empty suburb", response.url)
+
         locs_found = data['digitalData']['searchResultCount']
         self.log('locations_found', locs_found)
 
-        #  TODO: Not tested yet.
-        if locs_found > 200 and 'price-asc' in response.url:
-            url = response.url.replace('sort=price-asc', 'sort=price-desc')
-            yield scrapy.Request(url=url, callback=self.parse_listing)
-        elif locs_found > 400:
+        # When there is more than 400 loc on listing this design will fail poorly.
+        if locs_found > 400:
             self.log("CRITICAL ERROR", response.url)
             raise CloseSpider(reason='Too much data in response')
+
+        # Max loc on one page is 200. When there is more than 200 loc on listing changing sorting to DESC
+        elif locs_found > 200 and 'price-asc' in response.url:
+            url = response.url.replace('sort=price-asc', 'sort=price-desc')
+            yield scrapy.Request(url=url, callback=self.parse_listing)
 
         # TODO: Map Json to columns or store in MongoDB
         for loc in data['results']:
