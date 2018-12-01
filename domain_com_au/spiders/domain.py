@@ -73,11 +73,12 @@ class DomainSpider(scrapy.Spider):
 
         locs_found = data['digitalData']['searchResultCount']
 
-        # When there is more than 400 loc on listing this design will fail poorly.
+        # TODO: FAILED. Filter by no. of bedrooms
         if locs_found > 400:
             raise CloseSpider(reason='Too much data in response')
 
         # Max loc on one page is 200. When there is more than 200 loc on listing changing sorting to DESC
+        # TODO: change to : 200 < locs_found < 400
         elif locs_found > 200 and 'price-asc' in response.url:
             url = response.url.replace('sort=price-asc', 'sort=price-desc')
             yield scrapy.Request(url=url, callback=self.parse_listing)
