@@ -72,7 +72,7 @@ class DomainSpider(scrapy.Spider):
             self.log("ERROR - empty suburb", response.url)
 
         locs_found = data['digitalData']['searchResultCount']
-        self.log('locations_found', locs_found)
+        # self.log('locations_found', locs_found)
 
         # When there is more than 400 loc on listing this design will fail poorly.
         if locs_found > 400:
