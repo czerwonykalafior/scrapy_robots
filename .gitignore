@@ -1,2 +1,9 @@
 .idea/
 venv
+__pycache__/
+*.py[cod]
+domain_com_eu/domain_com_au/domain_com_au/__pycache__/
+domain_com_eu/domain_com_au/domain_com_au/spiders/__pycache__/
+domain_project/domain_com_au_project/domain_com_au/__pycache__/
+domain_project/domain_com_au_project/domain_com_au/spiders/__pycache__/
+domain_com_eu/domain_com_au/domain_com_au/__pycache__/
