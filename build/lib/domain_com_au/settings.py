@@ -10,7 +10,8 @@
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 from scrapy.utils.project import data_path
 
-mydata_path = data_path()
+
+mydata_path = data_path('.')
 
 BOT_NAME = 'domain_com'
 
