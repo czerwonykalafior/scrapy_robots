@@ -83,6 +83,7 @@ CONCURRENT_REQUESTS_PER_IP = 4
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
+DOTSCRAPY_ENABLED = True
 HTTPCACHE_ENABLED = True
 HTTPCACHE_EXPIRATION_SECS = 5000000
 HTTPCACHE_DIR = 'httpcache'
