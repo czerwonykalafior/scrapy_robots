@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup
 
 
 class DomainSpider(scrapy.Spider):
-    # This design will only work when on the listing page there is less than 400 locations found
 
     name = 'domain'
     allowed_domains = ['domain.com.au']
@@ -38,7 +37,7 @@ class DomainSpider(scrapy.Spider):
 
         for link in region_links:
             rel_url = link['href']
-            # TODO: replace hardcoded '/buy/' in link, what if we want to scrape more in future?
+            # TODO: replace hardcoded '/buy/' in link, what if we want to scrape more in future? Replace with -a ?
             if '/buy/' not in rel_url:
                 continue
             # TODO: response.follow can be used to skip urljoin with relative URLS
@@ -68,7 +67,7 @@ class DomainSpider(scrapy.Spider):
 
         for link in suburbs_links:
             suburb = re.search(pattern, link['href'], re.IGNORECASE)
-            # TODO: Lazy error handling
+            # TODO: Lazy regex error handling
             if suburb:
                 suburb = suburb.group(1)
             else:
