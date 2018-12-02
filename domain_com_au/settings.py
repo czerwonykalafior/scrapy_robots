@@ -10,7 +10,7 @@
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 from scrapy.utils.project import data_path
 
-mydata_path = data_path()
+mydata_path = data_path('.')
 
 BOT_NAME = 'domain_com'
 
@@ -63,7 +63,7 @@ DOTSCRAPY_ENABLED = True
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 EXTENSIONS = {
-    'scrapy_dotpersistence.DotScrapyPersistence': mydata_path
+    'scrapy_dotpersistence.DotScrapyPersistence': 0
 }
 
 # Configure item pipelines
