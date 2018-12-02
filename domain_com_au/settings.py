@@ -31,6 +31,7 @@ DOWNLOAD_DELAY = 1
 # The download delay setting will honor only one of:
 CONCURRENT_REQUESTS_PER_DOMAIN = 4
 CONCURRENT_REQUESTS_PER_IP = 4
+DOTSCRAPY_ENABLED = True
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
@@ -58,9 +59,9 @@ CONCURRENT_REQUESTS_PER_IP = 4
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+EXTENSIONS = {
+    'scrapy_dotpersistence.DotScrapyPersistence': 0
+}
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
@@ -83,7 +84,7 @@ CONCURRENT_REQUESTS_PER_IP = 4
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-DOTSCRAPY_ENABLED = True
+
 HTTPCACHE_ENABLED = True
 HTTPCACHE_EXPIRATION_SECS = 5000000
 HTTPCACHE_DIR = 'httpcache'
