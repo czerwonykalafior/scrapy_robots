@@ -11,7 +11,7 @@
 from scrapy.utils.project import data_path
 
 
-mydata_path = data_path('.')
+mydata_path = data_path('httpcache')
 
 BOT_NAME = 'domain_com'
 
@@ -87,6 +87,6 @@ DOTSCRAPY_ENABLED = True
 
 HTTPCACHE_ENABLED = True
 HTTPCACHE_EXPIRATION_SECS = 5000000
-HTTPCACHE_DIR = 'httpcache'
+HTTPCACHE_DIR = mydata_path
 HTTPCACHE_IGNORE_HTTP_CODES = []
 HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
