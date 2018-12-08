@@ -100,7 +100,7 @@ class DomainSpider(scrapy.Spider):
         # TODO: Below execution flow has a strong unpleasant smell
 
         # When more than 400 we have to Filter by no. of bedrooms
-        if no_of_locs_found > 400 and '&bedrooms=' not in response.url:
+        if no_of_locs_found > 402 and '&bedrooms=' not in response.url:
             bedrooms_no_params = ['0', '1', '2', '3', '4', '5-any']
             for no_of_bedrooms in bedrooms_no_params:
                 url = response.url + '&bedrooms=' + no_of_bedrooms
